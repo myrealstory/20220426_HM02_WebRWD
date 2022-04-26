@@ -1,0 +1,72 @@
+body, html {
+    font-family: Lato,Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',Meiryo,"メイリオ",Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',sans-serif;
+    width: 100%;
+    height: auto;
+    letter-spacing: 0.75em;
+    font-size: calc(100vw / 75);
+}
+
+section {
+    width: 100%;
+}
+img {
+    width: 100%;
+}
+
+#wrapper {
+    
+    /* background:url(../RINGO-img/background_red.png) fixed repeat var(--applered); */
+    background-image: url(../RINGO-img/background_red.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    /* background-color: var(--applered); */
+    background-size: 1000px 1000px;
+}
+.banner-content, #footer {
+    max-width: 1688px;
+}
+
+.logo {
+    z-index: 100;
+    left: 62px;
+    top: 80px;  
+    display: block;
+}
+
+.logo {
+    width: 320px;
+    /* height: 27px; */
+}
+
+.logo a {
+    width: 117px;
+    height: 72px;
+}
+
+.svg_logo {
+    width: 100%;
+    display: inline;
+    vertical-align: middle;
+}
+
+.svg_logo, .red {
+    fill: var(--ringored);
+}
+
+.wht {
+    fill: var(--white);
+}
+
+.ringo-bg {
+    background-size: cover;
+    background-image:url(../RINGO-img/background_mainvisual.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 1100px;
+    position: relative;
+}
+
+.svg_logo-ringo {
+    padding-top: 73rem;
+    width: 100%;
+}
