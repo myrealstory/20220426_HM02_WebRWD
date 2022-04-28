@@ -1,9 +1,13 @@
+/* * {
+    outline: 1px solid blue;
+} */
+
 body, html {
     font-family: Lato,Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',Meiryo,"メイリオ",Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',sans-serif;
     width: 100%;
     height: auto;
     letter-spacing: 0.75em;
-    font-size: calc(100vw / 75);
+    font-size: calc(100vw / 50);
 }
 
 section {
@@ -14,25 +18,30 @@ img {
 }
 
 #wrapper {
-    
     /* background:url(../RINGO-img/background_red.png) fixed repeat var(--applered); */
     background-image: url(../RINGO-img/background_red.png);
     background-attachment: fixed;
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
+    background-position: center;
+    background-color: var(--ringored) ;
     /* background-color: var(--applered); */
-    background-size: 1000px 1000px;
+    background-size: 784px 1100px;
+    min-width: 100%;
+    max-width: 100%;
 }
 .banner-content, #footer {
     max-width: 1688px;
 }
 .banner-content {
-    position: relative;    
-}
+    position: relative;   
+    height: 150rem;
+    background-color: #fff;
+} 
 
 .logo {
     z-index: 100;
     left: 3rem;
-    top: 3rem;  
+    top: 0;  
     display: block;
 }
 
@@ -59,24 +68,31 @@ img {
     fill: var(--white);
 }
 
+.bgbox {
+    height: 1100px;
+    overflow: hidden;
+}
+
 .ringo-bg {
-    background-size: cover;
+    height: 100%;
     background-image:url(../RINGO-img/background_mainvisual.jpg) ;
-    background-repeat: no-repeat;
+    background-size:cover;
     background-position: center center;
-    height: 80rem;
     position: relative;
 }
 
 .svg_logo-ringo {
-    width: 100%;
+    width: 700px;
     bottom: 0;
+    left: 50%;
+    display: inline-block;
+    transform: translateX(-50%);
     
 }
 
-@media screen {
+/* @media screen {
     
-}
+} */
 
 /*_______________________FEATURE__________________________*/
 
@@ -89,3 +105,28 @@ img {
     margin-left: 5rem;
     margin-bottom: 3rem;
 }
+
+.carousel-inner {
+    margin-bottom: 5rem;
+}
+
+.carousel-indicators {
+    position: relative;
+    justify-content:flex-start;
+    margin-right: 0;
+    margin-left: 3rem;
+    list-style: none;
+}
+
+.carousel-indicators li {
+    width: 22px;
+    height: 22px;
+    margin-right: 1.5rem;
+    margin-left: 0;
+    border-radius: 25px;
+    background-color: var(--applered);
+    border-top: 0 solid transparent;
+    border-bottom: 0 solid transparent;
+    opacity: 0.3;
+}
+
