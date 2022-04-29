@@ -3,10 +3,10 @@
 } */
 
 body, html {
-    font-family: Lato,Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',Meiryo,"メイリオ",Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',sans-serif;
+    font-family: 'Lato',Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',Meiryo,"メイリオ",Hiragino Kaku Gothic ProN,'ヒラギノ角ゴ ProN W3',sans-serif;
     width: 100%;
     height: auto;
-    letter-spacing: 0.75em;
+    /* letter-spacing: 6px; */
     font-size: calc(100vw / 50);
 }
 
@@ -17,6 +17,9 @@ img {
     width: 100%;
 }
 
+.wht {
+    color: var(--white);
+}
 #wrapper {
     /* background:url(../RINGO-img/background_red.png) fixed repeat var(--applered); */
     background-image: url(../RINGO-img/background_red.png);
@@ -25,7 +28,7 @@ img {
     background-position: center;
     background-color: var(--ringored) ;
     /* background-color: var(--applered); */
-    background-size: 784px 1100px;
+    background-size: 1304px 1804px;
     min-width: 100%;
     max-width: 100%;
 }
@@ -98,16 +101,27 @@ img {
 
 .id-title {
     
-    font-weight: 500;
-    font-size: 2.8rem;
+    font-weight: 600;
+    font-size: 2rem;
     color: var(--applered);
-    margin-top: 9rem;
+    margin-top: 6rem;
     margin-left: 5rem;
     margin-bottom: 3rem;
 }
 
+.carousel-controller{
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    margin-top: 4rem;
+}
+
+.carousel-controller a {
+    cursor: pointer;
+}
+
 .carousel-inner {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .carousel-indicators {
@@ -130,3 +144,112 @@ img {
     opacity: 0.3;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative;
+    background-color: var(--applered);
+    margin-right: 0.2rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    opacity: 1;
+    /* transition: opacity 0.3s ease; */
+}
+
+.h3{
+    margin: 3rem;
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+
+.date {
+    color: #8c8c8c;
+    font-size: 1.6rem;
+    margin-left: 3rem;
+}
+
+.news-link {
+    vertical-align: mid;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.ar{
+    fill: var(--applered);
+}
+
+.spanset span{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: var(--applered);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 2rem;
+}
+
+/*______________________________ABOUT____________________________*/
+
+#ABOUT {
+    padding-top: 7rem;    
+    padding-left: 3rem;
+}
+
+.abouttile {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    margin-bottom:3rem ;
+}
+
+.aboutsubtitle {
+    font-size: 2.2rem;
+    color: var(--white);
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
+
+.dot-move {
+    display: flex;
+    justify-content: center;
+    width: 1500px;
+}
+
+.dot {
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    height: 20px;
+    width: 100vw;
+}
+
+.left {
+    position: relative;
+    outline: 1px solid blue;
+}
+
+.left:before {
+    background-image: url(../RINGO-img/dot.svg);
+    background-size: contain;
+    background-position: center center;
+    height: 100%;
+    content: '';
+    position: absolute;
+    /* display: block; */
+    background-repeat: repeat-x;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* transform: translateX(1%); */
+    animation: dotrunning-left 1s linear infinite;
+}
+
+
+@keyframes dotrunning-left {
+    0%{
+        /* transform: translateX(-40%); */
+    }
+    100%{
+        /* transform: translateX(-38%); */
+    }
+}
