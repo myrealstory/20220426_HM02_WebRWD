@@ -20,13 +20,25 @@ img {
 .wht {
     color: var(--white);
 }
+
+.gry {
+    color: var(--fgry);
+}
+
+.bgwht {
+    background-color: var(--white);
+}
+
+.w-90 {
+    width: 90%;
+}
 #wrapper {
     /* background:url(../RINGO-img/background_red.png) fixed repeat var(--applered); */
     background-image: url(../RINGO-img/background_red.png);
     background-attachment: fixed;
     background-repeat: repeat; 
     background-position: center;
-    background-color: var(--ringored) ;
+    background-color: var(--applered) ;
     /* background-color: var(--applered); */
     background-size: 1304px 1804px;
     min-width: 100%;
@@ -202,7 +214,7 @@ img {
 }
 
 .abouttile {
-    font-size: 2.3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.5rem;
@@ -282,12 +294,11 @@ img {
 #PRODUCT {
     background-color: var(--white);
     padding-top: 5rem;
-    padding-bottom: 5rem;
 }
 
 .title-rsz {
     padding-left: 3rem;
-    padding-top: 8rem;
+    padding-top: 5rem;
 }
 .productbg {
     background-image: url(../RINGO-img/background_top-product.jpg);
@@ -295,14 +306,129 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+    padding-bottom: 35rem;
 }
 
 .btn-sz{
     width: 90%;
 }
 
-.point-head {
-    background-image: url(../RINGO-img/icon_pie.png);
-    height: 44px;width: 44px;
-    
+.btn-sz ul{
+    margin-top: 10rem;
 }
+
+.point-head {
+    background-color: var(--white);
+    height: 120px;width: 120px;
+    border-radius: 50%;
+    /* top: 0;
+    left: 50%;
+    transform: translate(-50%,25%)  */
+}
+
+.point-head img{
+    height: 60px;width: 50px;
+}
+.border-out {
+    height: 180px;width: 180px;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.border-out svg {
+    position: absolute;
+    width: 100%;
+    top:0;
+    left:0;     
+    animation: rotate 3s linear infinite;
+}
+
+.border {
+    stroke: var(--white);
+    fill: none;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.dropline:before {
+    position: absolute;
+    content: '';
+    border-right: 6px dotted #fff;
+    height: 100px;
+    top: 100%;
+    right: 50%;
+    left: 0;
+    bottom: 0;
+}
+.ball:before {
+    content: '';
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-info {
+    left:50%;
+    transform: translateX(-50%);
+    top: 350px;
+}
+
+.pititle {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.adlh {
+    line-height: 50px;
+}
+
+.sndmove {
+    top: 550px;
+}
+
+/*________________SHOP______________________*/
+
+.shopbg {
+    height: 400px;
+    position: relative;
+    margin-bottom: 12rem;
+}
+
+.shopcover {
+    background-image: url(../RINGO-img/background_next_shop.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.shopprofile::before {
+    background-image: url(../RINGO-img/mitsukoshi-toyota-750x422.jpg);
+    content: '';
+    position: absolute;
+    /* height: 30%; */
+    width: 30%;
+    padding-top: 16.5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 17rem;
+    left: 2rem;
+    border: 3px solid var(--white);
+}
+
