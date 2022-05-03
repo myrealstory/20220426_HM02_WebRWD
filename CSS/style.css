@@ -32,6 +32,14 @@ img {
 .w-90 {
     width: 90%;
 }
+
+.w-80 {
+    width: 80%;
+}
+/*________________________NAV______________________*/
+
+
+/*___________________WRAPPER_______________________*/
 #wrapper {
     /* background:url(../RINGO-img/background_red.png) fixed repeat var(--applered); */
     background-image: url(../RINGO-img/background_red.png);
@@ -54,7 +62,7 @@ img {
 } 
 
 .logo {
-    z-index: 100;
+    z-index: 1;
     left: 3rem;
     top: 0;  
     display: block;
@@ -176,8 +184,10 @@ img {
 
 .date {
     color: #8c8c8c;
-    font-size: 1.6rem;
-    margin-left: 3rem;
+    font-size: 1.5rem;
+    /* margin-left: 3rem; */
+    letter-spacing: 0.2rem;
+    font-weight: 600;
 }
 
 .news-link {
@@ -388,7 +398,7 @@ img {
 }
 
 .pititle {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -432,3 +442,112 @@ img {
     border: 3px solid var(--white);
 }
 
+
+.shopcontent h3 {
+    font-size: 2.4rem;
+}
+
+/*___________________________NEWS_____________________________*/
+
+#NEWS {
+    background-color: var(--white);
+    /* padding-top: 5rem; */
+}
+
+.newsbox {
+    padding-top: 3rem;    
+    width: auto;
+    max-width: 1400px;
+
+}
+
+.newsbox ul {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.newsbox li {
+    width: 40%;
+    padding-bottom: 5rem;
+    /* margin-left: 2rem;
+    margin-right: 3rem; */
+}
+
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.newsimg{
+    /* height: auto; */
+    width: 100%;
+    position: relative;
+    
+}
+
+.newsimg::before {
+    height: 4px;
+    width: 100%;
+    background-color: var(--applered);
+    content: '';
+    display: inline-block;
+    top:0;
+    left: 0;
+    position: absolute;
+
+}
+
+.newsimg::after {
+    padding-top: 50%;    
+    content: '';
+    display: block;
+}
+
+.h4 {
+    color: #575757;
+    line-height: 2.8rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/*________________________________FOOTER_____________________________*/
+
+#FOOTER {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.f-slogan {
+    width: 60%;
+}
+
+.f-logo {
+    width: 100%;
+}
+.f-btn {
+    width: 40%;
+}
+
+.f-svg  {
+    width: 100%;
+}
+
+.f-p {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.i-facebook {
+    width: 18%;
+
+}
+
+.i-twitter {
+    width: 18%;
+}
+
+.i-instagram {
+    width: 18%;
+}
