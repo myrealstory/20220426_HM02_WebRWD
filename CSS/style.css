@@ -17,6 +17,10 @@ img {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wht {
     color: var(--white);
 }
@@ -29,6 +33,9 @@ img {
     background-color: var(--white);
 }
 
+.bgred {
+    background-color: var(--applered);
+}
 .w-90 {
     width: 90%;
 }
@@ -37,7 +44,69 @@ img {
     width: 80%;
 }
 /*________________________NAV______________________*/
+.navcontainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4000;
+    
+}
+.menu {
+    background-image: url(../RINGO-img/background_red.png);
+    background-color: var(--applered);
+    background-size: auto;
+}
+.menu-logo svg{ 
+    width: 100%;
+}
 
+.menu-logo {
+    width: 12rem;
+}
+
+.menu-f-sz {
+    
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.imp-f { font-size: 2.5rem; }
+
+.noimp-f { font-size: 1.8rem;}
+
+.menu-f-sz:hover, .menu-f-sz:active{
+    list-style-type: disc;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.black-btn {
+    background-color: #000;
+    border: 1px solid #8c8c8c;
+    
+}
+
+.black-btn, .aphla-btn {
+    padding: 2rem;
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.aphla-btn {
+    border: 1px solid var(--white);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mb-last {
+    margin-bottom: 6rem;
+}
+
+.aphla-btn:hover {
+    background-color: antiquewhite;
+}
 
 /*___________________WRAPPER_______________________*/
 #wrapper {

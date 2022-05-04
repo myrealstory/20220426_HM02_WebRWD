@@ -15,7 +15,8 @@
     <meta property="og:site_name" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="https://ringo-applepie.com/wp-content/themes/ringo/assets/img/ogimage.jpg">
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,69 +69,71 @@
             </symbol>
         </svg>
     <nav>
-        <input type="checkbox" id="hamburger"/>
-        <label class="menuicon" for="hamburger">
-            <span></span>
-            <div class="burgerbg"></div>
-        </label>
-        <div class="menu">
-                <ul>
-                    <a href="#"><li>
-                        <svg class="f-svg" >
-                            <use class="wht" xLink:href="#ringo_logo_text"></use>
-                        </svg>
-                    </li></a>
-                    <a href="#"><li>top</li></a>
-                    <a href="#"><li>about</li></a>
-                    <a href="#"><li>product</li></a>
-                    <a href="#"><li>shop</li></a>
-                    <a href="#"><li>news</li></a>
-                    <a href="#"><li>recruit</li></a>
-                    <a href="#"><li>faq</li></a>
-                    <a href="#"><li>contact</li></a>
-                    <li>
-                        <div class="f-btn row justify-content-start">
-                            <a class="i-facebook mr-4 d-block">
-                                <svg class="w-100">
-                                    <use class="wht" xLink:href="#fb-logo"></use>
-                                </svg>
-                            </a>
-                            <a class="i-twitter mr-4 d-block">
-                                <svg class="w-100">
-                                    <use class="wht" xLink:href="#tw-logo"></use>
-                                </svg>
-                            </a>
-                            <a class="i-instagram d-block">
-                                <svg class="w-100">
-                                    <use class="wht" xLink:href="#ins-logo"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                        <button>
-                            Online Shop
-                        </button>
-                    
-                        <p>
-                            <svg class="f-svg" >
+        <div class="navcontainer">
+            <input type="checkbox" id="hamburger"/>
+            <label class="menuicon" for="hamburger">
+                <span id="spancolor" class="bgwht"></span>
+                <div class="burgerbg brwht" id="bgcircle"></div>
+            </label>
+            <div class="menu">
+                    <ul class="w-80 m-0-a">
+                        <a href="#"><li class="menu-logo">
+                            <svg>
                                 <use class="wht" xLink:href="#ringo_logo_text"></use>
                             </svg>
-                        </p>
-                        <button>
-                            Japanese
-                        </button>
-    
-                        <p>
-                            <svg class="f-svg" >
-                                <use class="wht" xLink:href="#rapl_logo_text"></use>
-                            </svg>
-                        </p>
-                        <button class="d-block">中國</button>
-                        <button class="d-block">香港SAR</button>
-                        <button class="d=block">ประเทศไทย</button>
-                    
-                
+                        </li></a>
+                        <a href="#"><li class="wht menu-f-sz imp-f">top</li></a>
+                        <a href="#"><li class="wht menu-f-sz imp-f">about</li></a>
+                        <a href="#"><li class="wht menu-f-sz imp-f">product</li></a>
+                        <a href="#"><li class="wht menu-f-sz imp-f">shop</li></a>
+                        <a href="#"><li class="wht menu-f-sz imp-f">news</li></a>
+                        <a href="#"><li class="wht menu-f-sz noimp-f mt-2">recruit</li></a>
+                        <a href="#"><li class="wht menu-f-sz noimp-f">faq</li></a>
+                        <a href="#"><li class="wht menu-f-sz noimp-f">contact</li></a>
+                        <li>
+                            <div class="row justify-content-start w-75">
+                                <a class="i-facebook mr-4 d-block">
+                                    <svg class="w-100">
+                                        <use class="wht" xLink:href="#fb-logo"></use>
+                                    </svg>
+                                </a>
+                                <a class="i-twitter mr-4 d-block ml-2">
+                                    <svg class="w-100">
+                                        <use class="wht" xLink:href="#tw-logo"></use>
+                                    </svg>
+                                </a>
+                                <a class="i-instagram d-block ml-2">
+                                    <svg class="w-100">
+                                        <use class="wht" xLink:href="#ins-logo"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                            <div class="w-80 m-0-a">
+                                <button class="text-left black-btn w-100 mb-5">
+                                    Online Shop
+                                </button>
+                                <p>
+                                    <svg class="menu-logo" >
+                                        <use class="wht" xLink:href="#ringo_logo_text"></use>
+                                    </svg>
+                                </p>
+                                <button class="text-left black-btn w-100 mb-5">
+                                    Japanese
+                                </button>
+                                <p>
+                                    <svg class="menu-logo" >
+                                        <use class="wht" xLink:href="#rapl_logo_text"></use>
+                                    </svg>
+                                </p>
+                                <button class="d-block aphla-btn w-100 text-left mb-4">中國</button>
+                                <button class="d-block aphla-btn w-100 text-left mb-4">香港SAR</button>
+                                <button class="d-block aphla-btn w-100 text-left mb-last">ประเทศไทย</button>
+                            </div>
+            
+            
+            </div>
         </div>
     </nav>
     <div id="wrapper" class="carousel overflow-hidden">
@@ -421,6 +424,9 @@
                     </li>`;
         }
         boxul.innerHTML = dialog;
+    </script>
+    <script src="./JS/scroll.js">
+
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
