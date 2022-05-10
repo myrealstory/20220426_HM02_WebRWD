@@ -21,6 +21,7 @@ a {
     text-decoration: none;
 }
 
+
 .wht {
     color: var(--white);
 }
@@ -48,6 +49,9 @@ a {
     width: 80%;
 }
 
+.w-60{
+    width: 60%;
+}
 /*______________________ASIDE_______________________*/
 aside {
     display: none;
@@ -87,7 +91,6 @@ aside {
     }
     .lauge{
         background-color: #000;
-       
         color: var(--white);
         text-decoration: none;
         text-align: center;
@@ -297,9 +300,11 @@ aside {
     #BANNER {
         max-width: 1600px;
     }
-
+    .bgbox {
+        height: 975px;
+    }
     .ringo-bg {
-        height: 75%;
+        height: 100%;
     }
 
 }
@@ -405,12 +410,21 @@ aside {
     color: var(--white);
 }
 
-@media screen and (min-width:768px){
+.slidewrap{
+    display: none;
+}
+
+
+@media screen and (min-width:768px) {
 
     #FEATURE {
         display: flex;
-        justify-content: center;
+        justify-content: start;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 1688px;
     }
+
     .sec-num {
         display: block;
         width: 5rem;
@@ -421,6 +435,7 @@ aside {
         width: 100%;
         font-size: 0.6rem;
         padding-top: 0.1rem;
+        padding-bottom: 0.5rem;
     }
 
     .titlenum::before {
@@ -436,16 +451,15 @@ aside {
         transform: translateX(-50%);
         right: 0;
         bottom: 0;
-
     }
 
     .t-border {
         border-right: 1px solid var(--applered);
         width: 50%;
-        height: 3vh;
+        height: 1rem;
     }
 
-    .id-title{
+    .id-title {
         transform: rotateZ(-90deg);
         font-size: 0.4rem;
         margin-top: 0rem;
@@ -455,7 +469,7 @@ aside {
         font-weight: normal;
     }
 
-    .carousel-inner {
+    /* .carousel-inner {
         width: 80%;
         height: 50vh;
         overflow: hidden;
@@ -465,12 +479,59 @@ aside {
         display: flex;
         justify-content: start;
         width: 100%;
+    } */
+
+    .slidewrap ul{
+        transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+    }
+
+    .slidebox {
+        position:relative;
+        height: 11.5rem;
+        width: 36rem;
+        overflow: hidden;
+        background-color: var(--white);
+    }
+
+    .items {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        /* align-items: baseline; */
+    }
+    .slider {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+
+    .sliderimg {
+        background-image: url(../RINGO-img/542ab69ec00400433c1ee6d12527d98c-840x473.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* background-position: center; */
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .sliderimg:nth-child(2){
+        background-image: url(../RINGO-img/7A02864D-6C68-44D6-BD88-3C065E973C08-750x422.jpg);
+    }
+
+    .sliderimg:nth-child(3){
+        background-image: url(../RINGO-img/7db53956e225e5b987f34dbacd549aa1-750x422.jpg);
+    }
+    .f-adjust {
+        padding-left: 1rem;
+        padding-top: 8rem;
     }
 
     .fh3 {
-        font-size: 0.5rem;
+        font-size: 0.45rem;
         margin-bottom: 0;
-        padding-top: 6rem;
+        /* padding-top: 6rem; */
         margin: 0;
     }
     
@@ -480,10 +541,100 @@ aside {
         margin-top: 0.3rem;
         margin-left: 0.5rem !important;
     }
+    #carouselExampleIndicators {
+        display: none !important;    
+    }
+    .slidewrap {
+        display: block;
+    }
 
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    .slider-btn {
+        width: 2.3rem;
+        height: 1rem;
+        display: flex;
+        justify-content: center;
+        bottom:0;
+        right: 1rem;
+        /* margin-top: 47vh; */
+    }
+
+    .nextbtn , .prevbtn {
+    position: absolute;
+    background-color: var(--applered);
+    opacity: 1;
+    width: 30%;
+    color: var(--white);
+    font-size: 0.5rem;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    }
+
+    .nextbtn:hover , .prevbtn:hover {
+        color: var(--applered) !important;
+        background-color: #fff;
+
+    }
+    a {
+        text-decoration: none !important;
+        color: var(--white) !important;
+    }
+
+    .nextbtn {
+        top: 0;
+        left: 0;
+        text-align: left;
+
+    }
+
+    .prevbtn {
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    .morebar {
+        width: 100%;
+    }
+
+    .RSZ {
+        width: 1.8rem;
+    }
+
+    .sidespan p{
+        font-size: 0.1rem;
+        text-transform: uppercase;
+    }
+
+    .sidespan svg{
+        width: 1rem;
+        display: block;
+    }
     
-
 }
+
+@media screen and (min-width:1300px) {
+    .slidebox{
+        width: 35rem;
+    }
+}
+@media screen and (min-width:1600px) {
+    .slidebox{
+        width: 34rem;
+    }
+}
+
+@media screen and (min-width:1820px) {
+    .slidebox{
+        width: 32rem;
+    }
+}
+
+
 /*______________________________ABOUT____________________________*/
 
 #ABOUT {
@@ -566,6 +717,12 @@ aside {
 
 .fwrap {
     word-wrap: break-word;
+}
+
+@media screen and (min-width: 768px){
+    #ABOUT {
+        
+    }
 }
 
 /*__________PRODUCT_______________*/
