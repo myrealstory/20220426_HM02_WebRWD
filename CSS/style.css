@@ -22,25 +22,7 @@ a {
 }
 
 
-.wht {
-    color: var(--white);
-}
 
-.gry {
-    color: var(--fgry);
-}
-
-.red {
-    color: var(--applered);
-}
-
-.bgwht {
-    background-color: var(--white);
-}
-
-.bgred {
-    background-color: var(--applered);
-}
 .w-90 {
     width: 90%;
 }
@@ -230,10 +212,9 @@ aside {
     background-size: 1304px 1804px;
     min-width: 100%;
     max-width: 100%;
+    
 }
-.banner-content, #footer {
-    max-width: 1688px;
-}
+
 .banner-content {
     position: relative;   
     height: 150rem;
@@ -294,11 +275,22 @@ aside {
 }
 
 @media screen and (min-width:768px){
+    .mainbox {
+        max-width: 1588px;
+        margin:0 auto;
+        box-shadow: 0 0 15px 5px #2929293a;
+    }
     .logo {
         display:none;
     }
     #BANNER {
-        max-width: 1600px;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 3rem;
+        background-color: var(--white);
+    }
+    .banner-content {
+        height: 40rem;    
     }
     .bgbox {
         height: 975px;
@@ -422,7 +414,6 @@ aside {
         justify-content: start;
         margin-top: 2rem;
         width: 100%;
-        max-width: 1688px;
     }
 
     .sec-num {
@@ -437,8 +428,7 @@ aside {
         padding-top: 0.1rem;
         padding-bottom: 0.5rem;
     }
-
-    .titlenum::before {
+    .redcircle::before{
         content: '';
         border-radius: 50%;
         border: 1px solid var(--applered);
@@ -452,9 +442,23 @@ aside {
         right: 0;
         bottom: 0;
     }
+    .grycircle::before {
+        content: '';
+        border-radius: 50%;
+        border: 1px solid var(--dgry);
+        width: 2vw;
+        height: 0;
+        padding-top: 2vw;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        bottom: 0;
+    }
 
     .t-border {
-        border-right: 1px solid var(--applered);
+        
         width: 50%;
         height: 1rem;
     }
@@ -483,6 +487,7 @@ aside {
 
     .slidewrap ul{
         transition: all 0.25s cubic-bezier(1, .01, .32, 1);
+        overflow: hidden;
     }
 
     .slidebox {
@@ -622,7 +627,7 @@ aside {
         width: 35rem;
     }
 }
-@media screen and (min-width:1600px) {
+@media screen and (min-width:1588px) {
     .slidebox{
         width: 34rem;
     }
@@ -721,7 +726,63 @@ aside {
 
 @media screen and (min-width: 768px){
     #ABOUT {
-        
+        padding: 0;
+    }
+
+    .display-sl {
+        display: none;
+    }
+
+    .aboutbg{
+        background-color: var(--lgry);
+        height: 18rem;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .about-box {
+        width: 100%;
+    }
+    
+    .about-top {
+        width: 100%;
+    }
+
+    .aboutprofile {
+        z-index: 1;
+        margin-top: 2rem;
+        width: 100%;
+        background-image: url(../RINGO-img/background_concept.jpg);
+        height: 20rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .aboutsubtitle {
+        margin-top: 5rem;
+        font-size: 0.8rem;
+        margin-bottom: 0 ;
+        padding-bottom: 0.5rem;
+    }
+    
+    .dot-animation {
+        width: 100%;
+        transform: scale(0.5) translateX(-14rem);
+    }
+
+    .aboutcontent {
+        font-size: 0.4rem;
+        line-height: 1.2rem;    
+    }
+
+    .aboutsz {
+        height: 20px;    
+        width: 90px;
+    }
+
+    .content-box {
+        width: 60%;
     }
 }
 
@@ -976,4 +1037,39 @@ aside {
 
 .i-instagram {
     width: 18%;
+}
+
+.wht {
+    color: var(--white);
+}
+
+.gry {
+    color: var(--fgry);
+}
+
+.red {
+    color: var(--applered);
+}
+
+.dgry{
+    color: var(--dgry);
+}
+
+.bgwht {
+    background-color: var(--white);
+}
+
+.bgred {
+    background-color: var(--applered);
+}
+
+.redline {
+    border-right: 1px solid var(--applered);    
+}
+
+.whtline {
+    border-right: 1px solid var(--white);
+}
+.gryline {
+    border-right: 1px solid var(--dgry);
 }
